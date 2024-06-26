@@ -1,0 +1,86 @@
+.w-30 {
+    width: 88px;
+}
+.size {
+    font-size: 15px;
+}
+header {
+    background-image: url(../imgs/banner.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40px;
+}
+.search {
+    color: white;
+}
+.custom-placeholder::placeholder {
+    color: white;
+}
+.circle {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #0078ff;
+    transition: all 0.3s ease;
+  
+}
+
+.circle i {
+    color: #0078ff;
+    transition: all 0.3s ease;
+}
+
+.circle:hover {
+    background-color: #0078ff;
+    box-shadow: 0 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.circle:hover i {
+    color: white;
+}
+
+.navbar-nav .nav-item .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 15px;
+}
+
+.navbar-nav .nav-item .nav-link.active,
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: rgba(0, 120, 255, 0.1);
+    border-radius: 50px;
+    border: 1px solid #0078ff;
+}
+
+.navbar-nav .nav-item .nav-link {
+    border-radius: 50px;
+    border: 1px solid #0078ff;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link i {
+    margin-right: 5px;
+    color: #0078ff;
+}
+
+.navbar-nav .nav-item .nav-link:hover i,
+.navbar-nav .nav-item .nav-link.active i {
+    color: #0078ff;
+}
+.bg-sec-color {
+    background-color: #343a40;
+}
+.bg-main-color {
+    background-color: #212529;
+}
+.font{
+    font-size: 90px;
+}

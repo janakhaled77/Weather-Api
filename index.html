@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg-dark">
+    <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark p-2">
+        <div class="container d-flex justify-content-between">
+            <div class="logo">
+                <a class="navbar-brand text-light d-flex justify-content-between" href="#home">
+                    <img src="imgs/logo@2x (1).png" class="p-2 w-30" alt="logo">
+                    <span>
+                        <h5>Weather</h5>
+                        <p class="size">tagline goes here</p>
+                    </span>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="list collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto m-2 p-3">
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-light active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-light" href="#News">News</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-light" href="#Life Cameras">Life Cameras</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-light" href="#photos">Photos</a>
+                    </li>
+                    <li class="nav-item me-2">
+                        <a class="nav-link text-light" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header id="home"
+        class=" d-flex align-items-center justify-content-center text-center text-white bg-black bg-opacity-50 p-5">
+        <div class="container px-3 py-5 text-center text-light">
+            <form class="d-flex w-100 search mb-4 " role="search">
+                    <input id="search" class="form-control me-2 p-3 rounded-4 bg-dark text-white custom-placeholder " type="search"
+                    placeholder="Find a location..." aria-label="Search">
+                <button id="search-button" class="btn btn-primary" type="button">FIND</button>
+            </form>
+            <div class="row gx-0">
+                <div class="col-md-4">
+                    <div class="card bg-sec-color text-light rounded-4">
+                        <div class="card-header d-flex justify-content-between bg-main-color">
+                            <span id="today_date_day_name"></span>
+                            <span id="today_date_day_number"></span>
+                            <span id="today_date_month"></span>
+                        </div>
+
+                        <div class="card-body text-start" id="today">
+                            <h5 id="today_location" class="card-title">Cairo</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h1 class="card-text font">
+                                    <span id="today_temp" class="font"></span><sup>o</sup>C
+                                </h1>
+                             
+                            </div>
+                          
+                            <img class="p-2" id="today_condition_img" src=""/>
+                            <p id="today_condition_text" class="fs-6 text-primary ps-2"></p>
+                        </div>
+                        <div class="d-flex text-light ps-4">
+                            <div class="d-flex me-3">
+                                <i class="fa-solid fa-umbrella fs-3 text-secondary p-1"></i>
+                                <p id="humidity"></p>
+                            </div>
+                            <div class="d-flex me-3">
+                                <i class="fa-solid fa-wind fs-3 text-secondary p-1"></i>
+                                <p id="wind"></p>
+                            </div>
+                            <div class="d-flex">
+                                <i class="fa-regular fa-compass fs-3 text-secondary p-1"></i>
+                                <p id="wind_direction"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-main-color text-light rounded-4">
+                        <div class="card-header text-center bg-sec-color">
+                            <span id="next_day_name"></span>
+                        </div>
+                        <div class="card-body text-center" id="tomorrow">
+                            
+                            <img class="p-2" id="next_condition_img" src=""/>
+                            <h2 class="card-text">
+                                <span id="next_max_temp"></span><sup>o</sup>C
+                            </h2>
+                            <h5 class="text-muted">
+                                <span id="next_min_temp" class="text-light"></span><sup class="text-light">o</sup>
+                                <span class="text-light">C</span>
+                            </h5>
+                            <p id="next_condition_text" class="fs-6 text-primary p-5"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-sec-color text-light rounded-4">
+                        <div class="card-header text-center bg-main-color">
+                            <span id="day_after_tomorrow_name"></span>
+                        </div>
+                        <div class="card-body text-center" id="day_after_tomorrow">
+                            
+                            <img class="p-2" id="day_after_tomorrow_condition_img" src=""/>
+                         
+                            <h2 class="card-text">
+                                <span id="day_after_tomorrow_max_temp"></span><sup>o</sup>C
+                            </h2>
+                            <h5 class="text-muted">
+                                <span id="day_after_tomorrow_min_temp" class="text-light"></span><sup
+                                    class="text-light">o</sup>
+                                <span class="text-light">C</span>
+                            </h5>
+                            <p id="day_after_tomorrow_condition_text" class="fs-6 text-primary p-5">Partly cloudy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="footer mt-5">
+        <form class="d-flex flex-column flex-md-row align-items-center justify-content-center w-75 search m-auto"
+            role="search">
+            <input class="form-control me-2 bg-dark text-white custom-placeholder mb-3 mb-md-0" type="search"
+                placeholder="Enter Your Email" aria-label="Search">
+            <button class="btn btn-primary mb-3 mb-md-0" type="submit">Find</button>
+            <div class="d-flex justify-content-center align-items-center ms-md-3">
+                <div class="circle m-2">
+                    <i class="fab fa-facebook fs-6"></i>
+                </div>
+                <div class="circle m-2">
+                    <i class="fab fa-instagram fs-6"></i>
+                </div>
+                <div class="circle m-2">
+                    <i class="fab fa-twitter fs-6"></i>
+                </div>
+                <div class="circle m-2">
+                    <i class="fab fa-linkedin fs-6"></i>
+                </div>
+            </div>
+        </form>
+        <p class="text-white text-center mt-3">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
